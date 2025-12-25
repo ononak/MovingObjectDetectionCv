@@ -19,9 +19,6 @@ set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
 
 
-# Tell CMake where to find Qt packages
-list(APPEND CMAKE_PREFIX_PATH "$ENV{HOME}/Qt/6.9.3/macos")
-
 # Tell CMake exactly where OpenCV’s CMakeConfig is
 set(OpenCV_DIR "/usr/local/opt/opencv/lib/cmake/opencv4")
 
