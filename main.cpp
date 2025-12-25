@@ -40,6 +40,13 @@ int main() {
       break; // Exit on any key press
     }
   }
+   // wait till escape key is pressed
+   while (cv::waitKey(0) != 27) {
+       // Keep waiting until escape key is pressed
+   }
+
+  cap.release();
+  cv::destroyAllWindows();
 
     return 0;
 }
