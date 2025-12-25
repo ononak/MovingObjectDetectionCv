@@ -24,7 +24,7 @@ std::vector<cv::Rect> MovingObjectDetector::detect(const cv::Mat &frame) {
 
 void MovingObjectDetector::postProcessMask() {
   // Remove shadows if detectShadows=true (shadows are 127)
-  cv::threshold(mForeGroundMask, mForeGroundMask, 200, 255, cv::THRESH_BINARY);
+  cv::threshold(mForeGroundMask, mForeGroundMask, 127, 255, cv::THRESH_BINARY);
   // speckle removal
   cv::morphologyEx(mForeGroundMask, mForeGroundMask, cv::MORPH_OPEN, mKernel3);
   // fill holes / connect parts
